@@ -38,4 +38,6 @@ if __name__ == '__main__':
     nums = [0, 1, 0, 2, 3]
     shift_zeros_to_the_end2(nums)
 
+    assert nums == [1, 2, 3, 0, 0]
+
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

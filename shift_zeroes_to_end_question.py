@@ -5,32 +5,11 @@ from typing import List
 
 
 def shift_zeros_to_the_end(nums: List[int]) -> None:
-    # Keep track of position where we should place next non-zero element
-    non_zero_pos = 0
-
-    # Move all non-zero elements to the front
-    for i in range(len(nums)):
-        if nums[i] != 0:
-            nums[non_zero_pos], nums[i] = nums[i], nums[non_zero_pos]
-            non_zero_pos += 1
-
-    print(nums)
+    pass
 
 
 def shift_zeros_to_the_end2(nums: List[int]) -> None:
-    # left pointer: where to place next non-zero number
-    # right pointer: scanning through the array
-    left = 0
-
-    # First pass: move all non-zero numbers to the front
-    for right in range(len(nums)):
-        if nums[right] != 0:
-            # Only swap if pointers are different
-            if left != right:
-                nums[left], nums[right] = nums[right], nums[left]
-            left += 1
-
-    print(nums)
+    pass
 
 
 # Press the green button in the gutter to run the script.

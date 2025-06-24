@@ -11,7 +11,7 @@ def is_palindrome_valid(s: str) -> bool:
         while left < right and not s[right].isalnum():
             right -= 1
 
-        if(s[left] != s[right]):
+        if(s[left].lower() != s[right].lower()):
             return False
         else:
             left += 1
@@ -22,6 +22,7 @@ def is_palindrome_valid(s: str) -> bool:
 if __name__ == '__main__':
     case_1 = "a dog! a panic in a pagoda."
     case_2 = "abc123"
+    case_3 = "A man, a plan, a canal: Panama"
 
     result1 = is_palindrome_valid(case_1)
     print(result1)
@@ -30,3 +31,7 @@ if __name__ == '__main__':
     result2 = is_palindrome_valid(case_2)
     print(result2)
     assert result2 == False, f"Expected {False}, but got {result2}"
+
+    result3 = is_palindrome_valid(case_3)
+    print(result3)
+    assert result3 == True, f"Expected {True}, but got {result3}"

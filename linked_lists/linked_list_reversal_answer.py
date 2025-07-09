@@ -27,9 +27,25 @@ class ListNode:
         # Make sure both lists are fully traversed (same length)
         return current_self is None and current_other is None
 
-
 def linked_list_reversal(head: ListNode) -> ListNode:
-    return head
+    # pointer to previous node
+    prev = None
+    # pointer to current node
+    current = head
+
+    # loop until current node is None
+    while current:
+        # store the next node in a temp variable
+        next = current.next
+        # set the current node's next to previous node'
+        current.next = prev
+        # set previous node to current node
+        prev = current
+        # set current node to next node
+        current = next
+
+    # return previous node which is now the head of the reversed linked list
+    return prev
 
 if __name__ == '__main__':
     head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))

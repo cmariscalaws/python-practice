@@ -1,8 +1,7 @@
 
 
 def doSomething():
-    for i in range(3):
-        print(i)
+    print(3 * 2 + 4//2)
 
 if __name__ == '__main__':
     doSomething()

@@ -40,3 +40,21 @@ if __name__ == '__main__':
     print("expected:")
     print(expectedResult)
     assert new_head == expectedResult, f"Expected {expectedResult}, but got {new_head}"
+
+    head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+    expectedResult = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+    new_head = remove_kth_last_node(head, 0)
+    print("result:")
+    print(new_head)
+    print("expected:")
+    print(expectedResult)
+    assert new_head == expectedResult, f"Expected {expectedResult}, but got {new_head}"
+
+    head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+    expectedResult = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+    new_head = remove_kth_last_node(head, 5)
+    print("result:")
+    print(new_head)
+    print("expected:")
+    print(expectedResult)
+    assert new_head == expectedResult, f"Expected {expectedResult}, but got {new_head}"

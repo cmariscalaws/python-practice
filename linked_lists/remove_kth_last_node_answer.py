@@ -29,7 +29,33 @@ class ListNode:
 
 
 def remove_kth_last_node(head: ListNode, k: int) -> ListNode:
-    return head
+
+    if k < 1:
+        return head
+
+    # create a dummy head
+    dummyHead = ListNode(-1, head)
+
+    # initialize two pointers, leader and trailer
+    leader = trailer = dummyHead
+
+    # separate the leader and trailer by k steps
+    for _ in range(k):
+        leader = leader.next
+        # k is greater than size then return original list
+        if not leader:
+            return head
+
+    # iterate until end of list where leader no longer has a next node
+    while leader.next:
+        # move both leader and trailer until end of list
+        leader = leader.next
+        trailer = trailer.next
+
+    # replace trailer's next (removing kth element from end of list)
+    trailer.next = trailer.next.next
+
+    return dummyHead.next
 
 if __name__ == '__main__':
     head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
@@ -52,6 +78,15 @@ if __name__ == '__main__':
 
     head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
     expectedResult = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+    new_head = remove_kth_last_node(head, 6)
+    print("result:")
+    print(new_head)
+    print("expected:")
+    print(expectedResult)
+    assert new_head == expectedResult, f"Expected {expectedResult}, but got {new_head}"
+
+    head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+    expectedResult = ListNode(2, ListNode(3, ListNode(4, ListNode(5))))
     new_head = remove_kth_last_node(head, 5)
     print("result:")
     print(new_head)

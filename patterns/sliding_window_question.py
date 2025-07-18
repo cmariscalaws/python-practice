@@ -26,3 +26,10 @@ if __name__ == '__main__':
     result = max_sum(array, k)
     print(result)
     assert result == expectedResult, f"Expected {expectedResult}, but got {result}"
+
+    array = [100, 200, 300, 400]
+    k = 4
+    expectedResult = 1000
+    result = max_sum(array, k)
+    print(result)
+    assert result == expectedResult, f"Expected {expectedResult}, but got {result}"

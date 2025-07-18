@@ -5,12 +5,15 @@ def max_sum(array: [int], k: int) -> int:
     n = len(array)
 
     # n must be greater than k
-    if n <= k:
+    if n < k:
         print("Invalid")
         return -1
 
     # compute sum of first window of size k
     window_sum = sum(array[0:k])
+
+    if n == k:
+        return window_sum
 
     # first sum available
     max_sum = window_sum
@@ -43,6 +46,13 @@ if __name__ == '__main__':
     array = [2, 3]
     k = 3
     expectedResult = -1
+    result = max_sum(array, k)
+    print(result)
+    assert result == expectedResult, f"Expected {expectedResult}, but got {result}"
+
+    array = [100, 200, 300, 400]
+    k = 4
+    expectedResult = 1000
     result = max_sum(array, k)
     print(result)
     assert result == expectedResult, f"Expected {expectedResult}, but got {result}"

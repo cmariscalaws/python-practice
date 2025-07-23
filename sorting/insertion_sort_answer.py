@@ -3,6 +3,7 @@ from typing import List
 # Insertion Sort
 # Time: O(n^2)
 # Space: O(1)
+# Not Stable
 
 '''
 ### Key Characteristics

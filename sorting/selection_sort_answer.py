@@ -3,6 +3,7 @@ from typing import List
 # Selection Sort
 # Time: O(n^2)
 # Space: O(1)
+# Stable
 
 '''
 Selection Sort Algorithm Explanation:

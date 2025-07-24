@@ -1,5 +1,10 @@
 from typing import List
 
+# Merge Sort
+# Time: O(nlogn)
+# Space: O(n)
+# Stable
+
 def sort_list(unsorted_list: List[int]) -> List[int]:
     pass
 

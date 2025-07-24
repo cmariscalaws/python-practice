@@ -12,6 +12,7 @@ from typing import List
 - **In-place sorting**: Modifies the original list
 - **Input Type**: List of integers
 - **Return Type**: Sorted list of integers
+- **good for sorting lists that are almost sorted
 ### How It Works
 1. **Outer Loop**:
 - Iterates through each element in the list from index 0 to n-1

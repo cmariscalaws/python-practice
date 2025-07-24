@@ -7,6 +7,7 @@ from typing import List
 
 '''
 Bubble Sort Algorithm Explanation:
+* Good for sorting lists that are almost sorted
 * The algorithm iterates through the list multiple times, comparing adjacent elements
 * In each iteration:
     - Compares pairs of adjacent elements from start to end

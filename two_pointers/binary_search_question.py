@@ -1,7 +1,7 @@
 
 from typing import List
 
-def binary_search(nums: List[int], target: int) -> List[int]:
+def binary_search(nums: List[int], target: int) -> int:
     pass
 
 if __name__ == '__main__':

@@ -12,5 +12,5 @@ if __name__ == '__main__':
 
     result = pair_sum_unsorted(nums, target)
 
-    print(result)
+    print(f"nums={nums} target={target} expected={expectedPair} result={result}")
     assert result == expectedPair, f"Expected {expectedPair}, but got {result}"

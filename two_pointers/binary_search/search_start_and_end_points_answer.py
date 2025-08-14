@@ -1,6 +1,8 @@
 
 from typing import List
 
+# testing git push
+
 def find_occurrences(nums: List[int], target: int) -> List[int]:
     # Initialize pointers for binary search and result variables
     left, right = 0, len(nums) - 1

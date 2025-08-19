@@ -1,21 +1,24 @@
 from typing import List
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
 def shift_zeros_to_the_end(nums: List[int]) -> None:
+
+    print(f"before: {nums}")
     pass
 
+    print(f"after: {nums}")
 
-def shift_zeros_to_the_end2(nums: List[int]) -> None:
-    pass
+
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    nums = [0, 1, 0, 2, 3]
-    shift_zeros_to_the_end2(nums)
+    nums = [1, 0, 2, 0, 0, 7]
+    shift_zeros_to_the_end(nums)
+    assert nums == [1, 2, 7, 0, 0, 0]
 
-    assert nums == [1, 2, 3, 0, 0]
+    nums = [3, 1, 0, 1, 3, 8, 9]
+    shift_zeros_to_the_end(nums)
+    assert nums == [3, 1, 1, 3, 8, 9, 0]
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    nums = [0, 0, 9, 4, 0, 0, 3, 8, 0]
+    shift_zeros_to_the_end(nums)
+    assert nums == [9, 4, 3, 8, 0, 0, 0, 0, 0]

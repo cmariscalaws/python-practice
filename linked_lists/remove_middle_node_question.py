@@ -51,7 +51,7 @@ if __name__ == '__main__':
     assert new_head == expectedResult, f"Expected {expectedResult}, but got {new_head}"
 
     head = ListNode(1, ListNode(2))
-    expectedResult = ListNode(2)
+    expectedResult = ListNode(1)
     new_head = remove_middle_node(head)
     print("result:")
     print(new_head)

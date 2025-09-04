@@ -7,6 +7,14 @@ def binary_search(nums: List[int], target: int) -> int:
     while left <= right:
         mid = (left + right) // 2
 
+        """
+        In binary search, if nums[mid] is less than target, 
+        it means the target must be in the right half of the array (since the array is sorted). 
+        Therefore, you move the left pointer to mid + 1 to exclude the left half (including mid), 
+        narrowing the search to the right side. 
+        Moving the right pointer in this case would incorrectly exclude possible target positions.
+        """
+
         if nums[mid] == target:
             return mid
         elif nums[mid] < target:

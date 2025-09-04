@@ -18,6 +18,11 @@ class Filter:
     def __init__(self, numbers: List[int]):
         self.numbers = numbers
 
+    @staticmethod
+    def is_even(x: int) -> bool:
+        return x % 2 == 0
+
+
     """
     Returns a list of even numbers from self.numbers.
 
@@ -25,7 +30,7 @@ class Filter:
     Only numbers for which the lambda returns True (i.e., even numbers) are included in the result.
     """
     def filter_even(self) -> List[int]:
-        return list(filter(lambda x: x % 2 == 0, self.numbers))
+        return list(filter(lambda x: Filter.is_even(x), self.numbers))
 
 if __name__ == "__main__":
     numbers = [1, 2, 3, 4, 5, 6]

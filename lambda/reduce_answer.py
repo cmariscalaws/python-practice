@@ -34,8 +34,12 @@ class Reduce:
     def __init__(self, numbers: List[int]):
         self.numbers = numbers
 
+    @staticmethod
+    def add(x: int, y: int) -> int:
+        return x + y
+
     def sum_of_numbers(self):
-        return reduce(lambda x, y: x + y, self.numbers)
+        return reduce(lambda x, y: Reduce.add(x, y), self.numbers)
 
 if __name__ == "__main__":
     numbers = [1, 2, 3, 4, 5]

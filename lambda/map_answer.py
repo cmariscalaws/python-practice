@@ -19,6 +19,10 @@ class Map(object):
     def __init__(self, numbers: List[int]):
         self.numbers = numbers
 
+    @staticmethod
+    def power(x: int) -> int:
+        return x ** 2
+
     """
         Returns a list where each number in self.numbers is squared.
 
@@ -33,7 +37,7 @@ class Map(object):
             If self.numbers = [1, 2, 3], returns [1, 4, 9].
     """
     def square(self) -> List[int]:
-        return list(map(lambda x: x ** 2, self.numbers))
+        return list(map(lambda x: Map.power(x), self.numbers))
 
 
 

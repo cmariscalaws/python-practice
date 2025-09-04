@@ -1,7 +1,7 @@
 from typing import List
 
 
-class MapExamples(object):
+class Map(object):
     """
     The map function in Python applies a given function to each item of an iterable (such as a list) and returns an iterator of the results.
 
@@ -40,8 +40,8 @@ class MapExamples(object):
 if __name__ == '__main__':
 
     numbers = [1, 2, 3, 4, 5]
-    map_examples = MapExamples(numbers)
-    squared_numbers = map_examples.square()
+    mapping = Map(numbers)
+    squared_numbers = mapping.square()
 
     assert squared_numbers == [1, 4, 9, 16, 25], f"Expected [1, 4, 9, 16, 25], but got {squared_numbers}"
 

@@ -1,6 +1,6 @@
 from typing import List
 
-class FilterExamples:
+class Filter:
     """
     The filter function in Python constructs an iterator from elements of an iterable for which a provided function returns True.
 
@@ -30,7 +30,7 @@ class FilterExamples:
 if __name__ == "__main__":
     numbers = [1, 2, 3, 4, 5, 6]
     expected = [2, 4, 6]
-    filter_examples = FilterExamples(numbers)
-    result = filter_examples.filter_even()
+    filtering = Filter(numbers)
+    result = filtering.filter_even()
     print(result)
     assert result == expected, f"Expected {expected}, but got {result}"

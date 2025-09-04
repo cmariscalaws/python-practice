@@ -1,7 +1,7 @@
 from typing import List
 from functools import reduce
 
-class ReduceExamples:
+class Reduce:
     """
     The reduce function in Python applies a specified function cumulatively to the items of an iterable,
         reducing the iterable to a single value.
@@ -40,7 +40,7 @@ class ReduceExamples:
 if __name__ == "__main__":
     numbers = [1, 2, 3, 4, 5]
     expected = 15
-    reduce_examples = ReduceExamples(numbers)
-    result = reduce_examples.sum_of_numbers()
+    reducing = Reduce(numbers)
+    result = reducing.sum_of_numbers()
     print(result)
     assert result == expected, f"Expected {expected}, but got {result}"

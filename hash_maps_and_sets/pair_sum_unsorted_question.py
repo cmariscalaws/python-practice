@@ -2,7 +2,17 @@
 from typing import List
 
 def pair_sum_unsorted(nums: List[int], target: int) -> List[int]:
-    pass
+    num_idx_map = {}
+    
+    for i, num in enumerate(nums):
+        compliment = target - num
+        
+        if compliment in num_idx_map:
+            return [num_idx_map[compliment], i]
+        else:
+            num_idx_map[num] = i
+            
+    return []
 
 if __name__ == '__main__':
     nums = [-1, 3, 4, 2]

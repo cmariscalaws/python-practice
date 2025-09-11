@@ -2,15 +2,15 @@
 from typing import List
 
 def pair_sum_unsorted(nums: List[int], target: int) -> List[int]:
-    num_idx_map = {}
+    num_index_dict = {}
     
     for i, num in enumerate(nums):
         compliment = target - num
         
-        if compliment in num_idx_map:
-            return [num_idx_map[compliment], i]
+        if compliment in num_index_dict:
+            return [num_index_dict[compliment], i]
         else:
-            num_idx_map[num] = i
+            num_index_dict[num] = i
             
     return []
 

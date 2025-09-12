@@ -25,6 +25,9 @@ def max_sum_subarray(nums, k):
         int: The maximum sum found.
     """
     n = len(nums)
+
+    print(f"Entering max_sum_subarray: nums={nums}, n={n}, k={k}", flush=True)
+
     if n < k or k <= 0:
         raise ValueError("Window size k must be positive and less than or equal to the length of the array.")
 
@@ -35,6 +38,7 @@ def max_sum_subarray(nums, k):
     for i in range(k):
         current_sum += nums[i]
     max_sum = current_sum
+    print(f"initial window (sum of elements, k={k}): current_sum={current_sum}", flush=True)
 
     # 2. Slide the Window
     left = 0
@@ -42,14 +46,17 @@ def max_sum_subarray(nums, k):
     while right < n:
         # Shrink the window
         current_sum -= nums[left]
+        print(f"decrease window (left:{left}): current_sum={current_sum}", flush=True)
         left += 1
 
         # Expand the window
         current_sum += nums[right]
+        print(f"increase window (right:{right}): current_sum={current_sum}", flush=True)
         right += 1
 
         # Process the current window
         max_sum = max(max_sum, current_sum)
+        print(f"max_sum={max_sum}", flush=True)
 
     return max_sum
 

@@ -37,7 +37,12 @@ def min_subarray_len(s, nums):
         current_sum += nums[right]
         # Contract window as long as the sum is at least s
         while current_sum >= s:
-            min_len = min(min_len, right - left + 1)
+            # The window is from index 'left' to 'right' (inclusive), 
+            #     so its length is (right - left + 1)
+            window_length = right - left + 1
+
+            min_len = min(min_len, window_length)
+            
             current_sum -= nums[left]
             left += 1
 

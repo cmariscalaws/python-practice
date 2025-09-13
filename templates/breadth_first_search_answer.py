@@ -14,19 +14,29 @@ def bfs_shortest_path(graph, start, goal):
     :param goal: target node
     :return: list, the shortest path from start to goal (inclusive), or [] if no path exists
     """
+    # If the start and goal are the same, return the start node as the path
     if start == goal:
         return [start]
+    # Set to keep track of visited nodes to avoid revisiting
     visited = set()
+    # Initialize the queue with the start node and the path taken so far (just start)
     queue = deque([(start, [start])])  # Each element is (current_node, path_so_far)
+    # Continue until there are nodes to process in the queue
     while queue:
+        # Pop the leftmost node and its path from the queue
         current, path = queue.popleft()
+        # Mark the current node as visited
         visited.add(current)
+        # Explore all neighbors of the current node
         for neighbor in graph.get(current, []):
+            # If the neighbor is the goal, return the path including this neighbor
             if neighbor == goal:
                 return path + [neighbor]
+            # If the neighbor hasn't been visited, add it to the queue and mark as visited
             if neighbor not in visited:
                 visited.add(neighbor)
                 queue.append((neighbor, path + [neighbor]))
+    # If the goal was not found, return an empty list
     return []  # No path found
 
 if __name__ == "__main__":

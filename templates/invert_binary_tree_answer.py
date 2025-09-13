@@ -1,6 +1,6 @@
 from typing import Optional
 
-from test_fixtures import TreeNode, BinaryTree
+from utils import TreeNode, BinaryTree
 
 def invert(node: TreeNode) -> Optional[TreeNode]:
     # Depth-first traversal; time complexity is O(n) where n is the number of nodes

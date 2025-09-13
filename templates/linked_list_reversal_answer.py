@@ -1,4 +1,4 @@
-from test_fixtures import ListNode
+from utils import ListNode
 
 def linked_list_reversal(head: ListNode) -> ListNode:
     # pointer to previous node

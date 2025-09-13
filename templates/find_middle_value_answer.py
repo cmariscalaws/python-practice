@@ -1,4 +1,4 @@
-from test_fixtures import ListNode
+from utils import ListNode
 
 # Function: find_middle_node_slow_fast_technique
 # Purpose: Returns the value of the middle node in a singly linked list using the slow/fast pointer technique.

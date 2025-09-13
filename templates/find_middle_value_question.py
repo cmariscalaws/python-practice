@@ -1,4 +1,4 @@
-from test_fixtures import ListNode
+from utils import ListNode
 
 def find_middle_node_slow_fast_technique(head: ListNode) -> ListNode:
     pass

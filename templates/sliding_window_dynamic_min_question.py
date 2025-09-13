@@ -17,7 +17,26 @@ Output: 2 (subarray [4, 3])
 """
 
 def min_subarray_len(s, nums):
-    pass
+    n = len(nums)
+
+    if s <= 0 or n == 0:
+        raise ValueError("s must be positive and nums requires elements")
+
+    min_len = float("inf")
+    current_sum = 0
+    left = 0
+
+    for right in range(n):
+        current_sum += nums[right]
+
+        while current_sum >= s:
+            window_len = (right - left) + 1
+            min_len = min(min_len, window_len)
+
+            current_sum -= nums[left]
+            left += 1 
+
+    return min_len if min_len != float("inf") else 0
 
 # --- Test Cases ---
 if __name__ == "__main__":

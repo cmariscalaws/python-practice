@@ -1,11 +1,3 @@
-"""
-Depth First Search (DFS) Template and Example
-------------------------------------------------
-DFS is a fundamental graph traversal algorithm. It explores as far as possible along each branch before backtracking.
-
-This example demonstrates DFS on an undirected graph represented as an adjacency list.
-"""
-
 def dfs(graph, start, visited=None):
     pass
 

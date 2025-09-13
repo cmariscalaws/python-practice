@@ -1,11 +1,3 @@
-# Breadth First Search (BFS) Template and Example
-# ---------------------------------------------------
-# BFS is a graph traversal algorithm that explores all neighbors at the current depth
-# before moving on to nodes at the next depth level. It is commonly used for finding
-# the shortest path in unweighted graphs, level order traversal in trees, and more.
-
-from collections import deque
-
 def bfs_shortest_path(graph, start, goal):
     pass
 

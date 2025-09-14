@@ -18,13 +18,24 @@ def dfs(graph, start, visited=None):
     Returns:
         list: The order in which nodes are visited.
     """
+    # If this is the first call, initialize the visited set
     if visited is None:
         visited = set()
+
+    # Mark the current node as visited
     visited.add(start)
+
+    # Start the order list with the current node
     order = [start]
+
+    # Iterate through all neighbors of the current node
     for neighbor in graph.get(start, []):
+        # If the neighbor has not been visited, recursively visit it
         if neighbor not in visited:
+            # Extend the order list with the result of the recursive DFS call
             order.extend(dfs(graph, neighbor, visited))
+
+    # Return the complete order of visited nodes
     return order
 
 if __name__ == "__main__":
@@ -81,4 +92,3 @@ if __name__ == "__main__":
     assert result4 == [3, 4], "Test case 4 failed!"
 
     print("All DFS test cases passed!")
-

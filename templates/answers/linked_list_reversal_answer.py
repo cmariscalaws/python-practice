@@ -1,4 +1,4 @@
-from utils import ListNode
+from templates.utils import ListNode
 
 def linked_list_reversal(head: ListNode) -> ListNode:
     # pointer to previous node

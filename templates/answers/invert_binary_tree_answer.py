@@ -1,6 +1,6 @@
 from typing import Optional
 
-from utils import TreeNode, BinaryTree
+from templates.utils import TreeNode, BinaryTree
 
 def invert(node: TreeNode) -> Optional[TreeNode]:
     # Depth-first traversal; time complexity is O(n) where n is the number of nodes

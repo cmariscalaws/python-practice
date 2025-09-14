@@ -1,20 +1,3 @@
-"""
-Sliding Window Example: Maximum Sum Subarray of Size K
-
-Problem Statement:
-Given an array of integers nums and an integer k, find the maximum sum of any contiguous subarray of size k.
-
-Sliding Window Algorithm:
-- The sliding window technique is used to efficiently solve problems involving contiguous subarrays or substrings.
-- Instead of recalculating the sum for every window, we slide the window by one element at a time, subtracting the element that is left behind and adding the new element.
-
-Time Complexity: O(n), where n is the length of the array.
-
-Example:
-nums = [2, 1, 5, 1, 3, 2], k = 3
-Output: 9 (subarray [5, 1, 3])
-"""
-
 def max_sum_subarray(nums, k):
     pass
 

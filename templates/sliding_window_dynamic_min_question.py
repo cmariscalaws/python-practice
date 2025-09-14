@@ -1,42 +1,5 @@
-"""
-Sliding Window Example: Smallest Subarray with Sum at Least S (Dynamic Window)
-
-Problem Statement:
-Given an array of positive integers nums and a positive integer s, find the minimal length of a contiguous subarray of which the sum is at least s. If there is no such subarray, return 0 instead.
-
-Sliding Window Algorithm (Dynamic Window):
-- The window expands to include new elements until the sum is at least s.
-- Then, it contracts from the left to find the smallest window that still satisfies the sum condition.
-- This approach is efficient for problems where the window size is not fixed and depends on a condition.
-
-Time Complexity: O(n), where n is the length of the array.
-
-Example:
-nums = [2, 3, 1, 2, 4, 3], s = 7
-Output: 2 (subarray [4, 3])
-"""
-
 def min_subarray_len(s, nums):
-    n = len(nums)
-
-    if s <= 0 or n == 0:
-        raise ValueError("s must be positive and nums requires elements")
-
-    min_len = float("inf")
-    current_sum = 0
-    left = 0
-
-    for right in range(n):
-        current_sum += nums[right]
-
-        while current_sum >= s:
-            window_len = (right - left) + 1
-            min_len = min(min_len, window_len)
-
-            current_sum -= nums[left]
-            left += 1 
-
-    return min_len if min_len != float("inf") else 0
+    pass
 
 # --- Test Cases ---
 if __name__ == "__main__":

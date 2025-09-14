@@ -1,11 +1,5 @@
 from typing import List
 
-# Two Pointers Technique for Pair Sum in Sorted Array
-# Time: O(n)
-# Space: O(1)
-# This function finds two indices in a sorted array such that the sum of the elements at those indices equals the target.
-# It uses a two-pointer approach, starting from both ends of the array and moving towards the
-# center based on the sum comparison with the target.
 def pair_sum_sorted(nums: List[int], target: int) -> List[int]:
     pass
 

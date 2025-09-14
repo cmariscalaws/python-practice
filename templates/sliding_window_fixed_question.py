@@ -1,6 +1,7 @@
 def max_sum_subarray(nums, k):
     pass
 
+
 # --- Test Cases ---
 if __name__ == "__main__":
     # Test 1: Example from docstring
@@ -42,4 +43,13 @@ if __name__ == "__main__":
         print(f"Test 5: Passed (Caught expected error: {e})")
     else:
         assert False, "Test 5: Failed (Did not catch expected error)"
+
+    # Test 6: Invalid n less than k (should raise ValueError)
+    try:
+        max_sum_subarray([1, 2, 3], 4)
+    except ValueError as e:
+        print(f"Test 6: Passed (Caught expected error: {e})")
+    else:
+        assert False, "Test 6: Failed (Did not catch expected error)"
+
 

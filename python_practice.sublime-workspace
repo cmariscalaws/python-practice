@@ -3,15 +3,74 @@
 	{
 		"selected_items":
 		[
+			[
+				"n",
+				"neighbor"
+			],
+			[
+				"g",
+				"get"
+			],
+			[
+				"min",
+				"min_len"
+			],
+			[
+				"cur",
+				"current_sum"
+			],
+			[
+				"l",
+				"left"
+			],
+			[
+				"nu",
+				"nums"
+			],
+			[
+				"num",
+				"num_idx_dict"
+			],
+			[
+				"m",
+				"max_sum"
+			],
+			[
+				"max",
+				"max_sum"
+			],
+			[
+				"c",
+				"current_sum"
+			],
+			[
+				"ma",
+				"max_sum"
+			],
+			[
+				"cu",
+				"current_sum"
+			],
+			[
+				"min_",
+				"min_len"
+			],
+			[
+				"t",
+				"target"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "binary_trees/invert_binary_tree_question.py",
+			"contents": "def max_sum_subarray(nums, k):\n    n = len(nums)\n\n    if k <= 0 or n == 0:\n        raise ValueError(\"\")\n\n# --- Test Cases ---\nif __name__ == \"__main__\":\n    # Test 1: Example from docstring\n    nums = [2, 1, 5, 1, 3, 2]\n    k = 3\n    expected = 9\n    result = max_sum_subarray(nums, k)\n    print(f\"Test 1: {result} (Expected: {expected})\")\n    assert result == expected, f\"Test 1 Failed: Expected {expected}, got {result}\"\n\n    # Test 2: All negative numbers\n    nums = [-2, -1, -5, -1, -3, -2]\n    k = 2\n    expected = -3  # Corrected expected value\n    result = max_sum_subarray(nums, k)\n    print(f\"Test 2: {result} (Expected: {expected})\")\n    assert result == expected, f\"Test 2 Failed: Expected {expected}, got {result}\"\n\n    # Test 3: Window size equals array length\n    nums = [1, 2, 3, 4]\n    k = 4\n    expected = 10\n    result = max_sum_subarray(nums, k)\n    print(f\"Test 3: {result} (Expected: {expected})\")\n    assert result == expected, f\"Test 3 Failed: Expected {expected}, got {result}\"\n\n    # Test 4: Window size is 1\n    nums = [5, 3, 8, 1]\n    k = 1\n    expected = 8\n    result = max_sum_subarray(nums, k)\n    print(f\"Test 4: {result} (Expected: {expected})\")\n    assert result == expected, f\"Test 4 Failed: Expected {expected}, got {result}\"\n\n    # Test 5: Invalid k (should raise ValueError)\n    try:\n        max_sum_subarray([1, 2, 3], 0)\n    except ValueError as e:\n        print(f\"Test 5: Passed (Caught expected error: {e})\")\n    else:\n        assert False, \"Test 5: Failed (Did not catch expected error)\"\n\n",
+			"file": "templates/sliding_window_fixed_question.py",
+			"file_size": 1467,
+			"file_write_time": 134022892554919485,
 			"settings":
 			{
-				"buffer_size": 3124,
+				"buffer_size": 1531,
 				"line_ending": "Unix"
 			},
 			"undo_stack":
@@ -21,406 +80,254 @@
 					1,
 					"insert",
 					{
-						"characters": "if"
+						"characters": "n"
 					},
-					"AgAAAKcJAAAAAAAAqAkAAAAAAAAEAAAAcGFzc6gJAAAAAAAAqQkAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAApwkAAAAAAACrCQAAAAAAAAAAAAAAAPC/"
+					"AQAAACMAAAAAAAAAJAAAAAAAAAAEAAAAcGFzcw",
+					"AQAAAAAAAAABAAAAIwAAAAAAAAAnAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					6,
 					1,
 					"insert",
 					{
-						"characters": " nod"
+						"characters": " ="
 					},
-					"BAAAAKkJAAAAAAAAqgkAAAAAAAAAAAAAqgkAAAAAAACrCQAAAAAAAAAAAACrCQAAAAAAAKwJAAAAAAAAAAAAAKwJAAAAAAAArQkAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAqQkAAAAAAACpCQAAAAAAAAAAAAAAAPC/"
+					"AgAAACQAAAAAAAAAJQAAAAAAAAAAAAAAJQAAAAAAAAAmAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAJAAAAAAAAAAkAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					7,
 					1,
 					"insert",
 					{
-						"characters": "e"
+						"characters": " l"
 					},
-					"AQAAAK0JAAAAAAAArgkAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAArQkAAAAAAACtCQAAAAAAAAAAAAAAAPC/"
+					"AgAAACYAAAAAAAAAJwAAAAAAAAAAAAAAJwAAAAAAAAAoAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAJgAAAAAAAAAmAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					8,
 					1,
-					"insert",
+					"insert_completion",
 					{
-						"characters": " is"
+						"completion": "len",
+						"format": "text",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "len"
 					},
-					"AwAAAK4JAAAAAAAArwkAAAAAAAAAAAAArwkAAAAAAACwCQAAAAAAAAAAAACwCQAAAAAAALEJAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAArgkAAAAAAACuCQAAAAAAAAAAAAAAAPC/"
+					"AgAAACcAAAAAAAAAJwAAAAAAAAABAAAAbCcAAAAAAAAAKgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKAAAAAAAAAAoAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					9,
 					1,
-					"insert",
+					"insert_snippet",
 					{
-						"characters": " None"
+						"contents": "($0)"
 					},
-					"BQAAALEJAAAAAAAAsgkAAAAAAAAAAAAAsgkAAAAAAACzCQAAAAAAAAAAAACzCQAAAAAAALQJAAAAAAAAAAAAALQJAAAAAAAAtQkAAAAAAAAAAAAAtQkAAAAAAAC2CQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAsQkAAAAAAACxCQAAAAAAAAAAAAAAAPC/"
+					"AQAAACoAAAAAAAAALAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKgAAAAAAAAAqAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					10,
 					1,
 					"insert",
 					{
-						"characters": ":"
+						"characters": "n"
 					},
-					"AQAAALYJAAAAAAAAtwkAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAtgkAAAAAAAC2CQAAAAAAAAAAAAAAAPC/"
+					"AQAAACsAAAAAAAAALAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKwAAAAAAAAArAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					11,
 					1,
-					"insert",
+					"insert_completion",
 					{
-						"characters": "\nretr"
+						"completion": "nums",
+						"format": "text",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "nums"
 					},
-					"BQAAALcJAAAAAAAAxAkAAAAAAAAAAAAAxAkAAAAAAADFCQAAAAAAAAAAAADFCQAAAAAAAMYJAAAAAAAAAAAAAMYJAAAAAAAAxwkAAAAAAAAAAAAAxwkAAAAAAADICQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAtwkAAAAAAAC3CQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					12,
-					1,
-					"left_delete",
-					null,
-					"AQAAAMcJAAAAAAAAxwkAAAAAAAABAAAAcg",
-					"AQAAAAAAAAABAAAAyAkAAAAAAADICQAAAAAAAAAAAAAAAPC/"
+					"AgAAACsAAAAAAAAAKwAAAAAAAAABAAAAbisAAAAAAAAALwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALAAAAAAAAAAsAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					13,
 					1,
 					"insert",
 					{
-						"characters": "urn"
+						"characters": "\n\n"
 					},
-					"AwAAAMcJAAAAAAAAyAkAAAAAAAAAAAAAyAkAAAAAAADJCQAAAAAAAAAAAADJCQAAAAAAAMoJAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAxwkAAAAAAADHCQAAAAAAAAAAAAAAAPC/"
+					"AwAAADAAAAAAAAAANQAAAAAAAAAAAAAANQAAAAAAAAA6AAAAAAAAAAAAAAAxAAAAAAAAADEAAAAAAAAABAAAACAgICA",
+					"AQAAAAAAAAABAAAAMAAAAAAAAAAwAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					14,
 					1,
 					"insert",
 					{
-						"characters": " "
+						"characters": "if"
 					},
-					"AQAAAMoJAAAAAAAAywkAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAygkAAAAAAADKCQAAAAAAAAAAAAAAAPC/"
+					"AgAAADYAAAAAAAAANwAAAAAAAAAAAAAANwAAAAAAAAA4AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANgAAAAAAAAA2AAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					15,
 					1,
 					"insert",
 					{
-						"characters": "None"
+						"characters": " "
 					},
-					"BAAAAMsJAAAAAAAAzAkAAAAAAAAAAAAAzAkAAAAAAADNCQAAAAAAAAAAAADNCQAAAAAAAM4JAAAAAAAAAAAAAM4JAAAAAAAAzwkAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAywkAAAAAAADLCQAAAAAAAAAAAAAAAPC/"
+					"AQAAADgAAAAAAAAAOQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOAAAAAAAAAA4AAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					16,
 					1,
 					"insert",
 					{
-						"characters": "\n\n"
+						"characters": "k"
 					},
-					"AwAAAM8JAAAAAAAA3AkAAAAAAAAAAAAA3AkAAAAAAADpCQAAAAAAAAAAAADQCQAAAAAAANAJAAAAAAAADAAAACAgICAgICAgICAgIA",
-					"AQAAAAAAAAABAAAAzwkAAAAAAADPCQAAAAAAAAAAAAAAAPC/"
+					"AQAAADkAAAAAAAAAOgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOQAAAAAAAAA5AAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					17,
 					1,
-					"left_delete",
-					null,
-					"AQAAANkJAAAAAAAA2QkAAAAAAAAEAAAAICAgIA",
-					"AQAAAAAAAAABAAAA3QkAAAAAAADdCQAAAAAAAAAAAAAAAPC/"
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAADoAAAAAAAAAOwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOgAAAAAAAAA6AAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					18,
 					1,
 					"insert",
 					{
-						"characters": "left"
+						"characters": "<="
 					},
-					"BAAAANkJAAAAAAAA2gkAAAAAAAAAAAAA2gkAAAAAAADbCQAAAAAAAAAAAADbCQAAAAAAANwJAAAAAAAAAAAAANwJAAAAAAAA3QkAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA2QkAAAAAAADZCQAAAAAAAAAAAAAAAPC/"
+					"AgAAADsAAAAAAAAAPAAAAAAAAAAAAAAAPAAAAAAAAAA9AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOwAAAAAAAAA7AAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					19,
 					1,
 					"insert",
 					{
-						"characters": " ="
+						"characters": " 0"
 					},
-					"AgAAAN0JAAAAAAAA3gkAAAAAAAAAAAAA3gkAAAAAAADfCQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA3QkAAAAAAADdCQAAAAAAAAAAAAAAAPC/"
+					"AgAAAD0AAAAAAAAAPgAAAAAAAAAAAAAAPgAAAAAAAAA/AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPQAAAAAAAAA9AAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					20,
 					1,
 					"insert",
 					{
-						"characters": " self."
+						"characters": " or"
 					},
-					"BgAAAN8JAAAAAAAA4AkAAAAAAAAAAAAA4AkAAAAAAADhCQAAAAAAAAAAAADhCQAAAAAAAOIJAAAAAAAAAAAAAOIJAAAAAAAA4wkAAAAAAAAAAAAA4wkAAAAAAADkCQAAAAAAAAAAAADkCQAAAAAAAOUJAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA3wkAAAAAAADfCQAAAAAAAAAAAAAAAPC/"
+					"AwAAAD8AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABBAAAAAAAAAAAAAABBAAAAAAAAAEIAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPwAAAAAAAAA/AAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					21,
 					1,
 					"insert",
 					{
-						"characters": "invert"
+						"characters": " n"
 					},
-					"BgAAAOUJAAAAAAAA5gkAAAAAAAAAAAAA5gkAAAAAAADnCQAAAAAAAAAAAADnCQAAAAAAAOgJAAAAAAAAAAAAAOgJAAAAAAAA6QkAAAAAAAAAAAAA6QkAAAAAAADqCQAAAAAAAAAAAADqCQAAAAAAAOsJAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA5QkAAAAAAADlCQAAAAAAAAAAAAAAAPC/"
+					"AgAAAEIAAAAAAAAAQwAAAAAAAAAAAAAAQwAAAAAAAABEAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQgAAAAAAAABCAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					22,
 					1,
-					"insert_snippet",
+					"insert",
 					{
-						"contents": "($0)"
+						"characters": " =="
 					},
-					"AQAAAOsJAAAAAAAA7QkAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA6wkAAAAAAADrCQAAAAAAAAAAAAAAAPC/"
+					"AwAAAEQAAAAAAAAARQAAAAAAAAAAAAAARQAAAAAAAABGAAAAAAAAAAAAAABGAAAAAAAAAEcAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARAAAAAAAAABEAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					23,
 					1,
 					"insert",
 					{
-						"characters": "node.lef"
+						"characters": " "
 					},
-					"CAAAAOwJAAAAAAAA7QkAAAAAAAAAAAAA7QkAAAAAAADuCQAAAAAAAAAAAADuCQAAAAAAAO8JAAAAAAAAAAAAAO8JAAAAAAAA8AkAAAAAAAAAAAAA8AkAAAAAAADxCQAAAAAAAAAAAADxCQAAAAAAAPIJAAAAAAAAAAAAAPIJAAAAAAAA8wkAAAAAAAAAAAAA8wkAAAAAAAD0CQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA7AkAAAAAAADsCQAAAAAAAAAAAAAAAPC/"
+					"AQAAAEcAAAAAAAAASAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARwAAAAAAAABHAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					24,
 					1,
 					"insert",
 					{
-						"characters": "t"
+						"characters": "0:"
 					},
-					"AQAAAPQJAAAAAAAA9QkAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA9AkAAAAAAAD0CQAAAAAAAAAAAAAAAPC/"
+					"AgAAAEgAAAAAAAAASQAAAAAAAAAAAAAASQAAAAAAAABKAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASAAAAAAAAABIAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					25,
+					1,
+					"insert",
+					{
+						"characters": "\nraise"
+					},
+					"BgAAAEoAAAAAAAAAUwAAAAAAAAAAAAAAUwAAAAAAAABUAAAAAAAAAAAAAABUAAAAAAAAAFUAAAAAAAAAAAAAAFUAAAAAAAAAVgAAAAAAAAAAAAAAVgAAAAAAAABXAAAAAAAAAAAAAABXAAAAAAAAAFgAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASgAAAAAAAABKAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					26,
 					1,
 					"insert",
 					{
-						"characters": "\nright"
+						"characters": " "
 					},
-					"BgAAAPYJAAAAAAAA/wkAAAAAAAAAAAAA/wkAAAAAAAAACgAAAAAAAAAAAAAACgAAAAAAAAEKAAAAAAAAAAAAAAEKAAAAAAAAAgoAAAAAAAAAAAAAAgoAAAAAAAADCgAAAAAAAAAAAAADCgAAAAAAAAQKAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA9gkAAAAAAAD2CQAAAAAAAAAAAAAAAPC/"
+					"AQAAAFgAAAAAAAAAWQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAWAAAAAAAAABYAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					27,
 					1,
-					"insert",
+					"insert_completion",
 					{
-						"characters": " ="
+						"completion": "ValueError",
+						"format": "text",
+						"keep_prefix": false,
+						"must_insert": true,
+						"trigger": "ValueError"
 					},
-					"AgAAAAQKAAAAAAAABQoAAAAAAAAAAAAABQoAAAAAAAAGCgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAABAoAAAAAAAAECgAAAAAAAAAAAAAAAPC/"
+					"AQAAAFkAAAAAAAAAYwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAWQAAAAAAAABZAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
 					28,
-					1,
-					"insert",
-					{
-						"characters": " self.inve"
-					},
-					"CgAAAAYKAAAAAAAABwoAAAAAAAAAAAAABwoAAAAAAAAICgAAAAAAAAAAAAAICgAAAAAAAAkKAAAAAAAAAAAAAAkKAAAAAAAACgoAAAAAAAAAAAAACgoAAAAAAAALCgAAAAAAAAAAAAALCgAAAAAAAAwKAAAAAAAAAAAAAAwKAAAAAAAADQoAAAAAAAAAAAAADQoAAAAAAAAOCgAAAAAAAAAAAAAOCgAAAAAAAA8KAAAAAAAAAAAAAA8KAAAAAAAAEAoAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAABgoAAAAAAAAGCgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					29,
-					1,
-					"insert",
-					{
-						"characters": "rt"
-					},
-					"AgAAABAKAAAAAAAAEQoAAAAAAAAAAAAAEQoAAAAAAAASCgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAEAoAAAAAAAAQCgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					30,
 					1,
 					"insert_snippet",
 					{
 						"contents": "($0)"
 					},
-					"AQAAABIKAAAAAAAAFAoAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAEgoAAAAAAAASCgAAAAAAAAAAAAAAAPC/"
+					"AQAAAGMAAAAAAAAAZQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAYwAAAAAAAABjAAAAAAAAAAAAAAAAAPC/"
 				],
 				[
-					31,
+					29,
 					1,
-					"insert",
+					"insert_snippet",
 					{
-						"characters": "node.righ"
+						"contents": "\"$0\""
 					},
-					"CQAAABMKAAAAAAAAFAoAAAAAAAAAAAAAFAoAAAAAAAAVCgAAAAAAAAAAAAAVCgAAAAAAABYKAAAAAAAAAAAAABYKAAAAAAAAFwoAAAAAAAAAAAAAFwoAAAAAAAAYCgAAAAAAAAAAAAAYCgAAAAAAABkKAAAAAAAAAAAAABkKAAAAAAAAGgoAAAAAAAAAAAAAGgoAAAAAAAAbCgAAAAAAAAAAAAAbCgAAAAAAABwKAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAEwoAAAAAAAATCgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					32,
-					1,
-					"insert",
-					{
-						"characters": "t"
-					},
-					"AQAAABwKAAAAAAAAHQoAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAHAoAAAAAAAAcCgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					34,
-					1,
-					"insert",
-					{
-						"characters": "\n\n"
-					},
-					"AwAAAB4KAAAAAAAAJwoAAAAAAAAAAAAAJwoAAAAAAAAwCgAAAAAAAAAAAAAfCgAAAAAAAB8KAAAAAAAACAAAACAgICAgICAg",
-					"AQAAAAAAAAABAAAAHgoAAAAAAAAeCgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					35,
-					1,
-					"insert",
-					{
-						"characters": "node.l"
-					},
-					"BgAAACgKAAAAAAAAKQoAAAAAAAAAAAAAKQoAAAAAAAAqCgAAAAAAAAAAAAAqCgAAAAAAACsKAAAAAAAAAAAAACsKAAAAAAAALAoAAAAAAAAAAAAALAoAAAAAAAAtCgAAAAAAAAAAAAAtCgAAAAAAAC4KAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAKAoAAAAAAAAoCgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					36,
-					1,
-					"insert",
-					{
-						"characters": "eft,"
-					},
-					"BAAAAC4KAAAAAAAALwoAAAAAAAAAAAAALwoAAAAAAAAwCgAAAAAAAAAAAAAwCgAAAAAAADEKAAAAAAAAAAAAADEKAAAAAAAAMgoAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAALgoAAAAAAAAuCgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					37,
-					1,
-					"insert",
-					{
-						"characters": " node.ir"
-					},
-					"CAAAADIKAAAAAAAAMwoAAAAAAAAAAAAAMwoAAAAAAAA0CgAAAAAAAAAAAAA0CgAAAAAAADUKAAAAAAAAAAAAADUKAAAAAAAANgoAAAAAAAAAAAAANgoAAAAAAAA3CgAAAAAAAAAAAAA3CgAAAAAAADgKAAAAAAAAAAAAADgKAAAAAAAAOQoAAAAAAAAAAAAAOQoAAAAAAAA6CgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAMgoAAAAAAAAyCgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					38,
-					2,
-					"left_delete",
-					null,
-					"AgAAADkKAAAAAAAAOQoAAAAAAAABAAAAcjgKAAAAAAAAOAoAAAAAAAABAAAAaQ",
-					"AQAAAAAAAAABAAAAOgoAAAAAAAA6CgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					39,
-					1,
-					"insert",
-					{
-						"characters": "right"
-					},
-					"BQAAADgKAAAAAAAAOQoAAAAAAAAAAAAAOQoAAAAAAAA6CgAAAAAAAAAAAAA6CgAAAAAAADsKAAAAAAAAAAAAADsKAAAAAAAAPAoAAAAAAAAAAAAAPAoAAAAAAAA9CgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAOAoAAAAAAAA4CgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					40,
-					1,
-					"insert",
-					{
-						"characters": " ="
-					},
-					"AgAAAD0KAAAAAAAAPgoAAAAAAAAAAAAAPgoAAAAAAAA/CgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAPQoAAAAAAAA9CgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					41,
-					1,
-					"insert",
-					{
-						"characters": " right,"
-					},
-					"BwAAAD8KAAAAAAAAQAoAAAAAAAAAAAAAQAoAAAAAAABBCgAAAAAAAAAAAABBCgAAAAAAAEIKAAAAAAAAAAAAAEIKAAAAAAAAQwoAAAAAAAAAAAAAQwoAAAAAAABECgAAAAAAAAAAAABECgAAAAAAAEUKAAAAAAAAAAAAAEUKAAAAAAAARgoAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAPwoAAAAAAAA/CgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					42,
-					1,
-					"insert",
-					{
-						"characters": " l"
-					},
-					"AgAAAEYKAAAAAAAARwoAAAAAAAAAAAAARwoAAAAAAABICgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAARgoAAAAAAABGCgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					43,
-					1,
-					"insert_completion",
-					{
-						"completion": "left",
-						"format": "text",
-						"keep_prefix": false,
-						"must_insert": false,
-						"trigger": "left"
-					},
-					"AgAAAEcKAAAAAAAARwoAAAAAAAABAAAAbEcKAAAAAAAASwoAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAASAoAAAAAAABICgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					44,
-					1,
-					"insert",
-					{
-						"characters": "\n\nreturn"
-					},
-					"CQAAAEsKAAAAAAAAVAoAAAAAAAAAAAAAVAoAAAAAAABdCgAAAAAAAAAAAABMCgAAAAAAAEwKAAAAAAAACAAAACAgICAgICAgVQoAAAAAAABWCgAAAAAAAAAAAABWCgAAAAAAAFcKAAAAAAAAAAAAAFcKAAAAAAAAWAoAAAAAAAAAAAAAWAoAAAAAAABZCgAAAAAAAAAAAABZCgAAAAAAAFoKAAAAAAAAAAAAAFoKAAAAAAAAWwoAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAASwoAAAAAAABLCgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					45,
-					1,
-					"insert",
-					{
-						"characters": " node"
-					},
-					"BQAAAFsKAAAAAAAAXAoAAAAAAAAAAAAAXAoAAAAAAABdCgAAAAAAAAAAAABdCgAAAAAAAF4KAAAAAAAAAAAAAF4KAAAAAAAAXwoAAAAAAAAAAAAAXwoAAAAAAABgCgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAWwoAAAAAAABbCgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					58,
-					1,
-					"revert",
-					null,
-					"AgAAAAAAAAAAAAAAAAAAAAAAAADpDAAAZnJvbSB0eXBpbmcgaW1wb3J0IE9wdGlvbmFsCgoKY2xhc3MgVHJlZU5vZGU6CiAgICBkZWYgX19pbml0X18oc2VsZiwgdmFsPTAsIGxlZnQ9Tm9uZSwgcmlnaHQ9Tm9uZSk6CiAgICAgICAgc2VsZi52YWwgPSB2YWwKICAgICAgICBzZWxmLmxlZnQgPSBsZWZ0CiAgICAgICAgc2VsZi5yaWdodCA9IHJpZ2h0CgpjbGFzcyBCaW5hcnlUcmVlOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIHJvb3Q9Tm9uZSk6CiAgICAgICAgc2VsZi5yb290ID0gcm9vdAoKICAgIEBzdGF0aWNtZXRob2QKICAgIGRlZiBmcm9tX2xpc3QodmFsdWVzKToKICAgICAgICAiIiIKICAgICAgICBCdWlsZCBhIGJpbmFyeSB0cmVlIGZyb20gYSBsZXZlbC1vcmRlciBsaXN0IG9mIHZhbHVlcy4KCiAgICAgICAgQXJnczoKICAgICAgICAgICAgdmFsdWVzIChsaXN0KTogTGlzdCBvZiB2YWx1ZXMgaW4gbGV2ZWwtb3JkZXIsIHdoZXJlIE5vbmUgcmVwcmVzZW50cyBtaXNzaW5nIG5vZGVzLgoKICAgICAgICBSZXR1cm5zOgogICAgICAgICAgICBCaW5hcnlUcmVlOiBBIGJpbmFyeSB0cmVlIGNvbnN0cnVjdGVkIGZyb20gdGhlIGdpdmVuIGxpc3QuCiAgICAgICAgIiIiCiAgICAgICAgaWYgbm90IHZhbHVlczoKICAgICAgICAgICAgcmV0dXJuIEJpbmFyeVRyZWUoKSAgIyBSZXR1cm4gYW4gZW1wdHkgdHJlZSBpZiB0aGUgaW5wdXQgbGlzdCBpcyBlbXB0eQoKICAgICAgICAjIENyZWF0ZSBUcmVlTm9kZSBvYmplY3RzIGZvciBlYWNoIHZhbHVlIChOb25lIGZvciBtaXNzaW5nIG5vZGVzKQogICAgICAgIG5vZGVzID0gW1RyZWVOb2RlKHZhbCkgaWYgdmFsIGlzIG5vdCBOb25lIGVsc2UgTm9uZSBmb3IgdmFsIGluIHZhbHVlc10KICAgICAgICBraWRzID0gbm9kZXNbOjotMV0gICMgUmV2ZXJzZSB0aGUgbGlzdCBmb3IgZWZmaWNpZW50IHBvcHBpbmcgZnJvbSB0aGUgZW5kCiAgICAgICAgcm9vdCA9IGtpZHMucG9wKCkgICMgVGhlIGZpcnN0IG5vZGUgaXMgdGhlIHJvb3Qgb2YgdGhlIHRyZWUKCiAgICAgICAgIyBBc3NpZ24gbGVmdCBhbmQgcmlnaHQgY2hpbGRyZW4gZm9yIGVhY2ggbm9kZSBpbiBsZXZlbCBvcmRlcgogICAgICAgIGZvciBub2RlIGluIG5vZGVzOgogICAgICAgICAgICBpZiBub2RlOgogICAgICAgICAgICAgICAgaWYga2lkczogbm9kZS5sZWZ0ID0ga2lkcy5wb3AoKSAgIyBBc3NpZ24gbGVmdCBjaGlsZCBpZiBhdmFpbGFibGUKICAgICAgICAgICAgICAgIGlmIGtpZHM6IG5vZGUucmlnaHQgPSBraWRzLnBvcCgpICAjIEFzc2lnbiByaWdodCBjaGlsZCBpZiBhdmFpbGFibGUKCiAgICAgICAgcmV0dXJuIEJpbmFyeVRyZWUocm9vdCkgICMgUmV0dXJuIHRoZSBjb25zdHJ1Y3RlZCBiaW5hcnkgdHJlZQoKICAgIGRlZiB0b19saXN0KHNlbGYpOgogICAgICAgICIiIgogICAgICAgIENvbnZlcnQgdGhlIGJpbmFyeSB0cmVlIHRvIGEgbGV2ZWwtb3JkZXIgbGlzdCByZXByZXNlbnRhdGlvbi4KCiAgICAgICAgUmV0dXJuczoKICAgICAgICAgICAgbGlzdDogTGV2ZWwtb3JkZXIgbGlzdCBvZiBub2RlIHZhbHVlcywgd2l0aCBOb25lIGZvciBtaXNzaW5nIG5vZGVzLgogICAgICAgICIiIgogICAgICAgIHJlc3VsdCA9IFtdICAjIExpc3QgdG8gc3RvcmUgbm9kZSB2YWx1ZXMKICAgICAgICBxdWV1ZSA9IFtzZWxmLnJvb3RdICAjIFN0YXJ0IHdpdGggdGhlIHJvb3Qgbm9kZSBpbiB0aGUgcXVldWUKICAgICAgICB3aGlsZSBxdWV1ZToKICAgICAgICAgICAgbm9kZSA9IHF1ZXVlLnBvcCgwKSAgIyBSZW1vdmUgdGhlIGZpcnN0IG5vZGUgZnJvbSB0aGUgcXVldWUKICAgICAgICAgICAgaWYgbm9kZToKICAgICAgICAgICAgICAgIHJlc3VsdC5hcHBlbmQobm9kZS52YWwpICAjIEFkZCB0aGUgbm9kZSdzIHZhbHVlIHRvIHRoZSByZXN1bHQKICAgICAgICAgICAgICAgIHF1ZXVlLmFwcGVuZChub2RlLmxlZnQpICAjIEFkZCBsZWZ0IGNoaWxkIHRvIHRoZSBxdWV1ZQogICAgICAgICAgICAgICAgcXVldWUuYXBwZW5kKG5vZGUucmlnaHQpICAjIEFkZCByaWdodCBjaGlsZCB0byB0aGUgcXVldWUKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHJlc3VsdC5hcHBlbmQoTm9uZSkgICMgQWRkIE5vbmUgZm9yIG1pc3Npbmcgbm9kZXMKICAgICAgICAjIFJlbW92ZSB0cmFpbGluZyBOb25lIHZhbHVlcyBmb3IgY2xlYW5lciBvdXRwdXQKICAgICAgICB3aGlsZSByZXN1bHQgYW5kIHJlc3VsdFstMV0gaXMgTm9uZToKICAgICAgICAgICAgcmVzdWx0LnBvcCgpCiAgICAgICAgcmV0dXJuIHJlc3VsdAoKICAgIGRlZiBfX3N0cl9fKHNlbGYpOgogICAgICAgIHJldHVybiBzdHIoc2VsZi50b19saXN0KCkpCgogICAgZGVmIGludmVydChzZWxmLCBub2RlOiBUcmVlTm9kZSkgLT4gT3B0aW9uYWxbVHJlZU5vZGVdOgogICAgICAgICMgRGVwdGgtZmlyc3QgdHJhdmVyc2FsOyB0aW1lIGNvbXBsZXhpdHkgaXMgTyhuKSB3aGVyZSBuIGlzIHRoZSBudW1iZXIgb2Ygbm9kZXMKICAgICAgICBpZiBub2RlIGlzIE5vbmU6CiAgICAgICAgICAgIHJldHVybiBOb25lCgogICAgICAgIGxlZnQgPSBzZWxmLmludmVydChub2RlLmxlZnQpCiAgICAgICAgcmlnaHQgPSBzZWxmLmludmVydChub2RlLnJpZ2h0KQoKICAgICAgICBub2RlLmxlZnQsIG5vZGUucmlnaHQgPSByaWdodCwgbGVmdAoKICAgICAgICByZXR1cm4gbm9kZQoKCiMgVGVzdAppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgIyBCdWlsZCB0cmVlOiAgICAgIDEKICAgICMgICAgICAgICAgICAgICAgLyAgIFwKICAgICMgICAgICAgICAgICAgICAyICAgICAzCiAgICAjICAgICAgICAgICAgICAvIFwgICAvIFwKICAgICMgICAgICAgICAgICAgNCAgIDUgNiAgIDcKICAgIHRyZWUgPSBCaW5hcnlUcmVlLmZyb21fbGlzdChbMSwgMiwgMywgNCwgNSwgNiwgN10pCiAgICBleHBlY3RlZCA9IFsxLCAzLCAyLCA3LCA2LCA1LCA0XQogICAgIyBFeHBlY3RlZCB0cmVlOiAgIDEKICAgICMgICAgICAgICAgICAgICAgLyAgIFwKICAgICMgICAgICAgICAgICAgICAzICAgICAyCiAgICAjICAgICAgICAgICAgICAvIFwgICAvIFwKICAgICMgICAgICAgICAgICAgNyAgIDYgNSAgIDQKICAgIHByaW50KCJPcmlnaW5hbDoiLCB0cmVlLnRvX2xpc3QoKSkgICMgWzEsIDIsIDMsIDQsIDUsIDYsIDddCiAgICB0cmVlLmludmVydCh0cmVlLnJvb3QpCiAgICBwcmludCgiSW52ZXJ0ZWQ6IiwgdHJlZS50b19saXN0KCkpICAjIFsxLCAzLCAyLCA3LCA2LCA1LCA0XQogICAgYXNzZXJ0IHRyZWUudG9fbGlzdCgpID09IGV4cGVjdGVkLCBmIkV4cGVjdGVkIHtleHBlY3RlZH0sIGJ1dCBnb3Qge3RyZWUudG9fbGlzdCgpfSIAAAAAAAAAADQMAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAYAoAAAAAAABgCgAAAAAAAAAAAAAAAPC/"
+					"AQAAAGQAAAAAAAAAZgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAZAAAAAAAAABkAAAAAAAAAAAAAAAAAPC/"
 				]
 			]
-		},
-		{
-			"file": "linked_lists/linked_list_reversal_question.py",
-			"settings":
-			{
-				"buffer_size": 1304,
-				"line_ending": "Unix"
-			}
 		}
 	],
 	"build_system": "",
@@ -434,6 +341,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"termin",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"ter",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"open ter",
+				"Terminus: Open Default Shell in Panel"
+			],
 			[
 				"open ",
 				"Terminus: Open Default Shell in Panel"
@@ -478,19 +397,54 @@
 	"expanded_folders":
 	[
 		"/Users/carlosmariscal/Repositories/python-practice",
-		"/Users/carlosmariscal/Repositories/python-practice/binary_trees",
-		"/Users/carlosmariscal/Repositories/python-practice/linked_lists"
+		"/Users/carlosmariscal/Repositories/python-practice/templates"
 	],
 	"file_history":
 	[
+		"/Users/carlosmariscal/Repositories/python-practice/templates/two_pointers_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/sliding_window_dynamic_min_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/sliding_window_dynamic_max_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/sliding_window_dynamic_min_answer.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/sliding_window_fixed_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/breadth_first_search_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/depth_first_search_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/depth_first_search_answer.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/breadth_first_search_answer.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/__init__.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/utils/__init__.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/binary_search_answer.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/binary_search_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/find_middle_value_answer.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/find_middle_value_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/invert_binary_tree_answer.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/invert_binary_tree_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/linked_list_reversal_answer.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/linked_list_reversal_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/pair_sum_unsorted_answer.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/pair_sum_unsorted_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/sliding_window_dynamic_max_answer.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/sliding_window_fixed_answer.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/two_pointers_answer.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/sliding_window_dynamic_answer.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/sliding_window_dynamic_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/sliding_window_answer.py",
+		"/Users/carlosmariscal/Repositories/python-practice/templates/sliding_window_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/sorting/quick_sort_answer.py",
+		"/Users/carlosmariscal/Repositories/python-practice/linked_lists/linked_list_reversal_question.py",
 		"/Users/carlosmariscal/Repositories/python-practice/linked_lists/find_middle_value_answer.py",
+		"/Users/carlosmariscal/Repositories/python-practice/hash_maps_and_sets/unique_occurrences_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/hash_maps_and_sets/pair_sum_unsorted_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/binary_trees/invert_binary_tree_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/hash_maps_and_sets/pair_sum_unsorted_answer.py",
+		"/Users/carlosmariscal/Repositories/python-practice/two_pointers/binary_search/binary_search_question.py",
+		"/Users/carlosmariscal/Repositories/python-practice/binary_trees/invert_binary_tree_answer.py",
 		"/Users/carlosmariscal/Repositories/python-practice/sorting/bubble_sort_answer.py",
 		"/Users/carlosmariscal/Repositories/python-practice/sorting/insertion_sort_question.py",
 		"/Users/carlosmariscal/Repositories/python-practice/patterns/sliding_window_answer.py"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 65.0
 	},
 	"find_in_files":
 	{
@@ -504,6 +458,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -527,51 +482,20 @@
 			[
 				{
 					"buffer": 0,
-					"file": "binary_trees/invert_binary_tree_question.py",
+					"file": "templates/sliding_window_fixed_question.py",
+					"selected": true,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3124,
+						"buffer_size": 1531,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2656,
-								2656
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "linked_lists/linked_list_reversal_question.py",
-					"selected": true,
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1304,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								727,
+								727
 							]
 						],
 						"settings":
@@ -593,11 +517,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 53.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 43.0
 	},
 	"layout":
 	{
@@ -629,6 +553,48 @@
 		[
 		]
 	},
+	"output.Terminus 2":
+	{
+		"height": 362.0,
+		"history":
+		[
+		]
+	},
+	"output.Terminus 3":
+	{
+		"height": 287.0,
+		"history":
+		[
+		]
+	},
+	"output.Terminus 4":
+	{
+		"height": 216.0,
+		"history":
+		[
+		]
+	},
+	"output.Terminus 5":
+	{
+		"height": 154.0,
+		"history":
+		[
+		]
+	},
+	"output.Terminus 6":
+	{
+		"height": 302.0,
+		"history":
+		[
+		]
+	},
+	"output.Terminus 7":
+	{
+		"height": 347.0,
+		"history":
+		[
+		]
+	},
 	"output.find_results":
 	{
 		"height": 0.0,
@@ -640,7 +606,7 @@
 	"project": "python_practice.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 102.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -678,7 +644,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 459.0,
+	"side_bar_width": 485.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

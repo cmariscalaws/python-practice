@@ -49,6 +49,14 @@ Examples:
 - r"\bword\b" matches 'word' as a whole word (not as part of 'sword')
 - r"\Astart" matches 'start' at the beginning of the string
 - r"end\Z" matches 'end' at the end of the string
+
+Key Functions in the re module:
+re.match(pattern, string, flags=0): Checks for a match only at the beginning of the string. Returns a Match object if found, None otherwise. 
+re.search(pattern, string, flags=0): Searches for the first occurrence of the pattern anywhere in the string. Returns a Match object if found, None otherwise.
+re.findall(pattern, string, flags=0): Finds all non-overlapping matches of the pattern and returns them as a list of strings (or tuples if groups are used).
+re.sub(pattern, repl, string, count=0, flags=0): Replaces occurrences of the pattern in the string with repl.
+re.split(pattern, string, maxsplit=0, flags=0): Splits the string by occurrences of the pattern.
+re.compile(pattern, flags=0): Compiles a regular expression into a pattern object for more efficient repeated use.
 """
 import re
 

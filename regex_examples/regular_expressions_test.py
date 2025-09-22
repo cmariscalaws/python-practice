@@ -61,18 +61,28 @@ re.compile(pattern, flags=0): Compiles a regular expression into a pattern objec
 import re
 
 def extract_product_codes(text):
-    pass
-
+    pattern :str = r"\b[A-Z]{3}-\d{4}\b"
+    return re.findall(pattern, text)
+    
 def extract_info_usernames(log):
-    pass
+    pattern = r"\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\] INFO: User (\w+\S+) "
+    return re.findall(pattern, log)
+
+def extract_failed_usernames(log):
+    pattern = r"\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\] ERROR: Failed login for user (\w+\S+)"
+    return re.findall(pattern, log)
 
 if __name__ == "__main__":
     # Test scenario #1
     # You have a string containing a list of product codes, some of which are in the format ABC-1234 (three uppercase letters, a dash, and four digits).
     # Write a regular expression to extract all valid product codes from the string.
     text = "Order: ABC-1234, xyz-5678, DEF-9876, GHI-0001, invalid, JKL-12, MNO-34567"
-    expected = ["ABC-1234", "DEF-9876", "GHI-0001"]
-    assert extract_product_codes(text) == expected
+    expected = ['ABC-1234', 'DEF-9876', 'GHI-0001']
+    result = extract_product_codes(text)
+    print(f"Result: {result}")
+    print(f"Expected: {expected}")
+    assert result == expected
+    print("Test passed!")
 
     # Test scenario #2
     # You have a log file containing lines like:
@@ -80,9 +90,20 @@ if __name__ == "__main__":
     [2025-09-20 14:23:01] INFO: User john_doe logged in
     [2025-09-20 14:24:15] ERROR: Failed login for user jane99
     [2025-09-20 14:25:00] INFO: User alice logged out
-    [2025-09-20 14:26:00] INFO: User bob123 performed action
+    [2025-09-20 14:26:00] INFO: User bob-123 performed action
     '''
-    expected = ["john_doe", "alice", "bob123"]
-    assert extract_info_usernames(log) == expected
+    expected = ["john_doe", "alice", "bob-123"]
+    result = extract_info_usernames(log)
+    print(f"Result: {result}")
+    print(f"Expected: {expected}")
+    assert result == expected
+    print("Test passed!")
+
+    expected = ["jane99"]
+    result = extract_failed_usernames(log)
+    print(f"Result: {result}")
+    print(f"Expected: {expected}")
+    assert result == expected
+    print("Test passed!")
 
     print("All tests passed.")

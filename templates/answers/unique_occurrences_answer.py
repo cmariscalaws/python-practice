@@ -1,16 +1,14 @@
 
 from typing import List
+from collections import defaultdict
 
 def unique_occurrences(nums: List[int]) -> bool:
     # Create a dictionary to count occurrences of each number
-    num_counts_dic = {}
+    num_counts_dic = defaultdict(int)
 
     for num in nums:
-        # Increment count if number already exists, else set to 1
-        if num in num_counts_dic:
-            num_counts_dic[num] += 1
-        else:
-            num_counts_dic[num] = 1
+        # Increment count by 1, if it doesn't exist it create a default int bec
+        num_counts_dic[num] += 1
 
     # Create a set of the occurrence counts to get unique values
     unique_occurrence_set = set(num_counts_dic.values())
